@@ -3,9 +3,9 @@ import Slider from '../components/Slider/Slider'
 
 function SliderScreen() {
     return (
-        <div>
-            <Slider/>
-        </div>
+        <>
+         <Slider/>
+        </>
     )
 }
 

@@ -44,18 +44,14 @@ const Category = () => {
 
   return (
     <div className='container my-5'>
-      <div className="row">
-        <div className="col-lg-4 col-md-6 my-4">
           <Link to="/category/create">
-            <button className='btn btn-outline-success'>Create</button>
+            <button className='btn btn-outline-success mb-3'>Create</button>
           </Link>
-        </div>
-      </div>
       <div className="row">
         {
           categories &&
           categories.map((cat) => (
-            <div key={cat.id} className="col-lg-3 my-2">
+            <div key={cat.id} className="col-lg-4 my-2">
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title text-center">

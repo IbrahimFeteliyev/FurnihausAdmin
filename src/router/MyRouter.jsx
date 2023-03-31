@@ -12,7 +12,7 @@ import Home from '../pages/Home';
 import OrderScreen from '../pages/OrderScreen';
 import ProductScreen from '../pages/ProductScreen';
 import UpdateCategory from './../components/Category/UpdateCategory';
-import CommentScreen from './../pages/CommentScreen';
+// import CommentScreen from './../pages/CommentScreen';
 import SliderScreen from '../pages/SliderScreen';
 import CreateSlider from '../components/Slider/CreateSlider';
 import UpdateSlider from '../components/Slider/UpdateSlider';

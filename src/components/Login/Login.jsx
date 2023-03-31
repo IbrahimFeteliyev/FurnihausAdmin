@@ -1,18 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 import { loginUserAction } from './../../redux/Actions/UserAction';
 import  Swal  from 'sweetalert2';
-import './login.scss'
 
+const theme = createTheme();
 
-const Login = () => {
+export default function Login() {
   const { userInfo } = useSelector((state) => state.user)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
   const navigate = useNavigate()
-  const dispach = useDispatch() 
+  const dispach = useDispatch()
 
   const loginHandler = () => {
     dispach(loginUserAction(email, password))
@@ -23,7 +34,7 @@ const Login = () => {
       if (userInfo.status === 200) {
         navigate("/dashboard")
       }
-      else{
+      else {
         Swal.fire({
           icon: 'error',
           title: 'Bir xəta baş verdi.',
@@ -34,31 +45,69 @@ const Login = () => {
     }
   }, [userInfo])
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
 
   return (
-    <div id='login'>
-      <div className="container my-5">
-        <div className="row">
-          <div className="col-lg-6">
-            <img width='100%' src="#" alt="" />
-          </div>
-          <div className="col-lg-6">
-            <div className="well">
-              <p><strong>Email</strong></p>
-              <input type="text" name="email" placeholder="example@gmail.com" id="input-email" className="form-control" onChange={(e) => setEmail(e.target.value)} />
-              <p style={{marginTop:"10px"}}><strong>Password</strong></p>
-              <input type="password" name="password" placeholder="Password" id="input-password" className="form-control" onChange={(e) => setPassword(e.target.value)} />
-              <div className="comment-submit">
-                <button type="submit" className="cart-btn" onClick={() => loginHandler()}>
-                  Login
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Admin Login
+          </Typography>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-export default Login
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+              onClick={() => loginHandler()}
+            >
+              LOGIN
+            </Button>
+          </Box>
+        </Box>
+      </Container>
+    </ThemeProvider>
+  );
+}

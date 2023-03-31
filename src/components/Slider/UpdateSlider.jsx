@@ -42,17 +42,17 @@ function UpdateSlider() {
 
   return (
     <div className='container my-5'>
-          <div className="col-lg-6 my-2">
+          <div className="col-lg-12 my-2">
             <TextField fullWidth id="outlined-basic" value={Title} variant="outlined" label="Slider title"   onChange={(e) => setTitle(e.target.value)} />
           </div>
-          <div className="col-lg-6 my-2">
+          <div className="col-lg-12 my-2">
             <TextField fullWidth id="outlined-basic" value={PhotoUrl} onChange={(e) => setPhotoUrl(e.target.value)} label="PhotoUrl" variant="outlined" />
           </div>
-          <div className="col-lg-6 my-2">
+          <div className="col-lg-12 my-2">
             <TextField fullWidth id="outlined-basic" value={Description} onChange={(e) => setDescription(e.target.value)} label="Description" variant="outlined" />
           </div>
         <div className="row">
-          <div className="col-lg-6 my-2">
+          <div className="col-lg-12 my-2">
             <Button
               fullWidth
               variant="contained"

@@ -59,7 +59,7 @@ function Slider() {
                 {
                     sliders &&
                     sliders.map((e) => (
-                        <div key={e.id} className="col-lg-3 my-2">
+                        <div key={e.id} className="col-lg-6 col-12 my-2">
                             <div className="card">
                                 <div className="card-body">
                                     <img width='100%' src={e.photoUrl} alt="" />

@@ -67,11 +67,11 @@ const Product = () => {
                 {
                     products &&
                     products.map((product) => (
-                        <div key={product.id} className="col-lg-3 col-md-6 my-2">
+                        <div key={product.id} className="col-lg-4 col-md-6 my-2">
                             <div className="card">
                                 <div className="card-body text-center">
                                     <img className='img-fluid' style={{ height: 200 }} src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
-                                    <h5>{product.name}</h5>
+                                    <h5 className='mt-2'>{product.name}</h5>
                                 </div>
                                 <div className="card-footer">
                                     <div className="row text-center">

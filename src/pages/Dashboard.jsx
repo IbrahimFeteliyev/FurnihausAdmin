@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
-    <div className='container my-5'>
       <div className="row">
         <div className="col-lg-4 my-2">
               <div className="card">
@@ -51,28 +50,6 @@ const Dashboard = () => {
         </div>
         <div className="col-lg-4 my-2">
           <div className="card">
-            <Link to='/comment' style={{textDecoration: "none"}}>
-              <div className="card-body">
-                <h3 className="card-title text-center my-5">
-                  Comment
-                </h3>
-              </div>
-            </Link>
-          </div>
-        </div>
-        {/* <div className="col-lg-4 my-2">
-          <div className="card">
-            <Link to='/brand' style={{textDecoration: "none"}}>
-              <div className="card-body">
-                <h3 className="card-title text-center my-5">
-                  Brand
-                </h3>
-              </div>
-            </Link>
-          </div>
-        </div> */}
-        <div className="col-lg-4 my-2">
-          <div className="card">
             <Link to='/slider' style={{textDecoration: "none"}}>
               <div className="card-body">
                 <h3 className="card-title text-center my-5">
@@ -83,7 +60,6 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-    </div>
   )
 }
 

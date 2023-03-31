@@ -152,10 +152,10 @@ const SideBar = () => {
     <div className="sideBar">
       <ul>
         <li className="dashboard" onClick={() => addDashboard()}>
-          <a>Dashboard</a>
+          <span>Dashboard</span>
         </li>
         <li className="product" onClick={() => addProduct()}>
-          <a>Product</a>
+          <span>Product</span>
         </li>
         <li className="category" onClick={() => addCategory()}>
           <a>Category</a>

@@ -44,21 +44,21 @@ const UpdateBlog = () => {
 
 
   return (
-    <div className='container my-5'>
-      <div className="col-lg-6 my-2">
+    <div className='container my-5 m-auto'>
+      <div className="row">
+      <div className="col-lg-12 my-2">
         <TextField fullWidth id="outlined-basic" value={Title} onChange={(e) => setTitle(e.target.value)} label="Title" variant="outlined" />
       </div>
-      <div className="col-lg-6 my-2">
+      <div className="col-lg-12 my-2">
         <TextField fullWidth id="outlined-basic" value={Image} onChange={(e) => setImage(e.target.value)} label="Image" variant="outlined" />
       </div>
-      <div className="col-lg-6 my-2">
+      <div className="col-lg-12 my-2">
         <TextField fullWidth id="outlined-basic" value={CoverPhoto} onChange={(e) => setCoverPhoto(e.target.value)} label="CoverPhoto" variant="outlined" />
       </div>
-      <div className="col-lg-6 my-2">
+      <div className="col-lg-12 my-2">
         <TextField fullWidth id="outlined-basic" value={Description} onChange={(e) => setDescription(e.target.value)} label="Description" variant="outlined" />
       </div>
-      <div className="row">
-        <div className="col-lg-6 my-2">
+        <div className="col-lg-12 my-2">
           <Button
             fullWidth
             variant="contained"

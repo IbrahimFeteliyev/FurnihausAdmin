@@ -124,9 +124,6 @@ const CreateProduct = () => {
                             </TextField>
                         </div>
                         <div className="col-lg-12 my-2">
-                            <TextField fullWidth id="outlined-basic" onChange={(e) => setBrand(e.target.value)} label="Brand" variant="outlined" />
-                        </div>
-                        <div className="col-lg-12 my-2">
                             <TextField fullWidth id="outlined-basic" onChange={(e) => setSku(e.target.value)} label="SKU" variant="outlined" />
                         </div>
 

@@ -3,9 +3,9 @@ import Blog from '../components/Blog/Blog'
 
 const BlogScreen = () => {
   return (
-    <div>
+    <>
         <Blog />
-    </div>
+    </>
   )
 }
 

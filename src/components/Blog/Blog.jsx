@@ -51,19 +51,15 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className='container my-5'>
-            <div className="row">
-                <div className="col-lg-4 col-md-6 my-4">
-                    <Link to="/blog/create">
-                        <button className='btn btn-outline-success'>Create</button>
-                    </Link>
-                </div>
-            </div>
+    <div className='container'>
+              <Link to="/blog/create">
+                <button className='btn btn-outline-success my-3'>Create</button>
+              </Link>
             <div className="row">
                 {
                     blogs &&
                     blogs.map((e) => (
-                        <div key={e.id} className="col-lg-3 my-2">
+                        <div key={e.id} className="col-lg-6 my-2">
                             <div className="card">
                                 <div className="card-body">
                                     <img width='100%' src={e.image} alt="" />

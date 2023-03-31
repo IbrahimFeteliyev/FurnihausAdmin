@@ -111,6 +111,7 @@ const UpdateProduct = () => {
                 <div className="col-lg-8">
                     <div className="row">
                         <div className="col-lg-12">
+                            {/* <input type="text" DefaultValue={productList.name}  label="Name" onChange={(e) => setName(e.target.value)} /> */}
                             <TextField
                             InputLabelProps={{ shrink: true }} fullWidth id="outlined-basic" value={productList.name} variant="outlined" label="Name" onChange={(e) => setName(e.target.value)} />
                         </div>

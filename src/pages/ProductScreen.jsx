@@ -3,9 +3,9 @@ import Product from '../components/Product/Product'
 
 const ProductScreen = () => {
   return (
-    <div>
+    <>
         <Product />
-    </div>
+    </>
   )
 }
 

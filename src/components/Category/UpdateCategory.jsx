@@ -36,14 +36,14 @@ const UpdateCategory = () => {
 
   return (
     <div className='container my-5'>
-          <div className="col-lg-6 my-2">
+          <div className="col-lg-12 my-2">
             <TextField fullWidth id="outlined-basic" value={Name} onChange={(e) => setName(e.target.value)} label="Category name" variant="outlined" />
           </div>
-          <div className="col-lg-6 my-2">
+          <div className="col-lg-12 my-2">
             <TextField fullWidth id="outlined-basic" value={PhotoUrl} onChange={(e) => setPhotoUrl(e.target.value)} label="PhotoUrl" variant="outlined" />
           </div>
         <div className="row">
-          <div className="col-lg-6 my-2">
+          <div className="col-lg-12 my-2">
             <Button
               fullWidth
               variant="contained"
